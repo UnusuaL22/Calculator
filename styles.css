@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 350px;
+  width: 100%;
+}
+
+.display {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 25px 20px;
+  margin-bottom: 25px;
+  text-align: right;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.display-main {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.display-sub {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-clear {
+  background: rgba(255, 107, 107, 0.3);
+  color: #ff6b6b;
+}
+
+.btn-clear:hover {
+  background: rgba(255, 107, 107, 0.5);
+}
+
+.btn-operator {
+  background: rgba(74, 144, 226, 0.3);
+  color: #4a90e2;
+}
+
+.btn-operator:hover {
+  background: rgba(74, 144, 226, 0.5);
+}
+
+.btn-equals {
+  background: rgba(46, 204, 113, 0.3);
+  color: #2ecc71;
+  grid-column: span 2;
+}
+
+.btn-equals:hover {
+  background: rgba(46, 204, 113, 0.5);
+}
+
+.btn-zero {
+  grid-column: span 2;
+}
+
+.calculator-title {
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* Subtle animations */
+.calculator {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
